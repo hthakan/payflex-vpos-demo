@@ -147,17 +147,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IPaymentProcessor.cs" />
-    <Compile Include="IPaymentUYIProcessor.cs" />
-    <Compile Include="Payment.cs" />
-    <Compile Include="PaymentManager.cs" />
-    <Compile Include="PaymentProcessorFactory.cs" />
-    <Compile Include="PaymentResponse.cs" />
-    <Compile Include="Processor\PayFlexCommonPaymentProcessor.cs" />
-    <Compile Include="Processor\PayFlexMPIProcessor.cs" />
-    <Compile Include="Processor\PayFlexUYICommonPaymentProcessor.cs" />
-    <Compile Include="Processor\PayFlexUYIVposProcessor.cs" />
-    <Compile Include="Processor\PayFlexVPosProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -173,7 +162,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\PayFlex.Client\PayFlex.Client.csproj">
+      <Project>{95e542a6-3335-4aeb-808a-5da1234511ec}</Project>
+      <Name>PayFlex.Client</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
